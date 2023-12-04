@@ -33,6 +33,9 @@ private Controller controller;
         stage.setWidth(800);
         stage.show();
 
+
+        
+
         //TODO Tilføj knapper og andre ting til UI
     }
 
