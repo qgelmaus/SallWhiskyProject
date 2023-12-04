@@ -27,7 +27,7 @@ public class Controller {
     public Destillering opretDestillat(LocalDate startDato, LocalDate slutDato, int væskeMængde, String rygemateriale,
        String kornSort, Medarbejder medarbejder,String kommentar) {
         Destillering d = new Destillering(startDato, slutDato, væskeMængde, rygemateriale, kornSort, medarbejder, kommentar);
-        Destillering.addDestillering(d);
+        Destillering.addDestillering(d); //TODO Noget med storage her
         return d;
     }
     //TODO: Oprettelse af objekter.

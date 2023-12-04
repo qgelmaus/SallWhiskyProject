@@ -11,6 +11,7 @@ public class Storage {
     private List<Destillering> destillerings;
     private List<Fad> fads;
 
+
     public Storage(){
         destillerings = new ArrayList<Destillering>();
         fads = new ArrayList<Fad>();
