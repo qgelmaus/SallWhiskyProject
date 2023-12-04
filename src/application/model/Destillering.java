@@ -1,6 +1,5 @@
 package application.model;
 
-import java.security.Key;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -13,18 +12,14 @@ private String rygemateriale;
 private String kornSort;
 private String kommentar;
 private ArrayList<Medarbejder> medarbejders;
-private static ArrayList<Destillering> destillerings;
 
 //TODO Kod sammenhæng til klassen påfyldning
 
 
     //Konstructor:
-public Destillering(LocalDate startDato, LocalDate slutDato, int væskeMængde, String rygemateriale,
-                    String kornSort, Medarbejder medarbejder,String kommentar){
+public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbejder){
     this.startDato = startDato;
     this.slutDato = slutDato;
-    this.væskeMængde = væskeMængde;
-    this.kommentar = kommentar;
 }
 
 
@@ -35,12 +30,7 @@ public void addMedarbejder(Medarbejder medarbejder){
         medarbejder.addDestillering(this);
     }
 }
-    public static void addDestillering(Destillering destillering){
-        if(!destillerings.contains(destillering)){
-            destillerings.add(destillering);
-            destillering.addDestillering(this);
-        }
-    }
+
 public void removeMedarbejder(Medarbejder medarbejder){
     if(medarbejders.contains(medarbejder)){
         medarbejders.remove(medarbejder);
