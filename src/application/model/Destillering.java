@@ -13,6 +13,8 @@ private String kornSort;
 private String kommentar;
 private ArrayList<Medarbejder> medarbejders;
 
+
+
 public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbejder){
     this.startDato = startDato;
     this.slutDato = slutDato;
@@ -27,6 +29,5 @@ public void addMedarbejder(Medarbejder medarbejder){
 public ArrayList<Medarbejder> getMedarbejders(){
     return new ArrayList<>(medarbejders);
 }
-
 
 }

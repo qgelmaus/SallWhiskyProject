@@ -29,6 +29,12 @@ public class Fad {
             this.isBlend = true;
     }
 
+    public ArrayList<Påfyldning> getPåfyldnings(){
+        return new ArrayList<>(påfyldnings);
+    }
+
+
+
 
 
 }
