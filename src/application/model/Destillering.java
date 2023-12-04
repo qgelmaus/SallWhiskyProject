@@ -12,6 +12,7 @@ private String rygemateriale;
 private String kornSort;
 private String kommentar;
 private ArrayList<Medarbejder> medarbejders;
+private ArrayList<Påfyldning> påfyldnings;
 
 //TODO Kod sammenhæng til klassen påfyldning
 
@@ -20,6 +21,7 @@ private ArrayList<Medarbejder> medarbejders;
 public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbejder){
     this.startDato = startDato;
     this.slutDato = slutDato;
+    this.påfyldnings = new ArrayList<>();
 }
 
 
@@ -42,6 +44,14 @@ public ArrayList<Medarbejder> getMedarbejders(){
 }
 
     //Sammenhæng til påfyldning:
+
+public void addPåfyldning(Påfyldning påfyldning){
+    this.påfyldnings.add(påfyldning);
+}
+public ArrayList<Påfyldning> getPåfyldnings(){
+    return new ArrayList<>(påfyldnings);
+}
+
 
 
 

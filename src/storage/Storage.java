@@ -28,6 +28,17 @@ public class Storage {
             destillerings.add(destillering);
     }
 
+    //Alle gemte fad
+    public List<Fad> getAllFad(){
+        return new ArrayList<Fad>(fads);
+    }
+
+    //Gemme fad
+    public void addFad(Fad fad){
+        if(!fads.contains(fad))
+            fads.add(fad);
+    }
+
 
 
 
