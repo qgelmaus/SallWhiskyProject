@@ -7,15 +7,32 @@ public class Påfyldning {
 
     private Destillering destillering;
     private Fad fad;
-    private int antalLiter;
+    private double antalLiter;
     private LocalDate dato;
 
 
-    public Påfyldning(int antalLiter, LocalDate dato, Destillering destillering){
+    public Påfyldning(double antalLiter, LocalDate dato, Destillering destillering){
         this.antalLiter = antalLiter;
         this.dato = dato;
         this.destillering = destillering;
     }
+
+    //TODO Påfyldningsmetoder
+    //Påfyldningsmetoder:
+    public Whisky påfyldningAfWhisky(double antalLiter){
+        //TODO ???
+    }
+
+    public double resterendeIndhold(){
+        //TODO ???
+        return -1;
+    }
+
+    public double getAntalLiter(){
+        return antalLiter;
+    }
+
+
 
 
     //TODO Kod sammenhæng til klassen Fad

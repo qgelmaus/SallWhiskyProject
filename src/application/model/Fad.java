@@ -7,6 +7,7 @@ public class Fad {
     private int størrelse;
     private boolean isBlend;
     private String tidligereBrug;
+    private boolean isFull;
     private boolean isOptaget;
     private String oprindelse;
     private ArrayList<Påfyldning> påfyldnings;
@@ -22,7 +23,22 @@ public class Fad {
         påfyldnings = new ArrayList<>();
     }
 
+    //Kontrollerer kapacitet
+    public double checkCapacity(){
+        double totalIndhold = 0;
+        for(Påfyldning påfyldning : påfyldnings){
+            totalIndhold =+ påfyldning.getAntalLiter();
+        }
+        return størrelse - totalIndhold;
+    }
 
+    //Hvis total indhold i fadet er >90%, sættes isOptaget som true;
+
+    public void setOptaget(){
+        if(checkCapacity() >= størrelse * 0.90){
+            isOptaget = true;
+        }
+    }
 
     //Hvis et fad indeholder mere end en påfyldning skal isBlend være == true;
     public void makeBlend(){
