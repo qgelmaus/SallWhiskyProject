@@ -13,7 +13,6 @@ private String kornSort;
 private String kommentar;
 private ArrayList<Medarbejder> medarbejders;
 
-//TODO Kod sammenhæng til klassen påfyldning
 
 
     //Konstructor:
@@ -23,14 +22,13 @@ public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbe
 }
 
 
-    //Sammenhæng til medarbejder:
+    //Sammenhæng til medarbejder start:
 public void addMedarbejder(Medarbejder medarbejder){
     if(!medarbejders.contains(medarbejder)){
         medarbejders.add(medarbejder);
         medarbejder.addDestillering(this);
     }
 }
-
 public void removeMedarbejder(Medarbejder medarbejder){
     if(medarbejders.contains(medarbejder)){
         medarbejders.remove(medarbejder);
@@ -40,8 +38,16 @@ public void removeMedarbejder(Medarbejder medarbejder){
 public ArrayList<Medarbejder> getMedarbejders(){
     return new ArrayList<>(medarbejders);
 }
+    //Sammenhæng til medarbejder slut.
+
+
 
     //Sammenhæng til påfyldning:
+
+    //TODO Kod sammenhæng til klassen påfyldning
+
+
+    //Sammenhæng til påfyldning slut.
 
 
 

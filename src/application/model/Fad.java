@@ -11,7 +11,7 @@ public class Fad {
     private String oprindelse;
     private ArrayList<Påfyldning> påfyldnings;
 
-    //TODO Færdiggør sammenhæng til klassen påfyldning
+
     public Fad(String fadType, int størrelse, String tidligereBrug, String oprindelse){
         this.fadType = fadType;
         this.størrelse = størrelse;
@@ -24,17 +24,35 @@ public class Fad {
 
 
 
+    //Hvis et fad indeholder mere end en påfyldning skal isBlend være == true;
     public void makeBlend(){
         if (påfyldnings.size()>1)
             this.isBlend = true;
     }
 
+
+    //TODO Færdiggør sammenhæng til klassen påfyldning
+    //Sammenhæng til påfyldning start:
     public ArrayList<Påfyldning> getPåfyldnings(){
         return new ArrayList<>(påfyldnings);
     }
 
+    public void addPåfyldning(Påfyldning påfyldning){
+        if(!påfyldnings.contains(påfyldning)){
+            påfyldnings.add(påfyldning);
+            påfyldning.setFad(this);
+        }
+    }
+
+    public void removePåfyldning(Påfyldning påfyldning){
+        if(påfyldnings.contains(påfyldning)){
+            påfyldnings.remove(påfyldning);
+            påfyldning.setFad(null)
+        }
+    }
 
 
+    //Sammenhæng til påfyldning slut.
 
 
 }
