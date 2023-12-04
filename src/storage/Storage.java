@@ -22,6 +22,12 @@ public class Storage {
         return new ArrayList<Destillering>(destillerings);
     }
 
+    //Gemme destilleringer
+    public void addDestillering(Destillering destillering){
+        if(!destillerings.contains(destillering))
+            destillerings.add(destillering);
+    }
+
 
 
 
