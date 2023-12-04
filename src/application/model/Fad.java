@@ -11,7 +11,7 @@ public class Fad {
     private String oprindelse;
     private ArrayList<Påfyldning> påfyldnings;
 
-
+    //TODO Færdiggør sammenhæng til klassen påfyldning
     public Fad(String fadType, int størrelse, String tidligereBrug, String oprindelse){
         this.fadType = fadType;
         this.størrelse = størrelse;
