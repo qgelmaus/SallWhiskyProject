@@ -47,7 +47,7 @@ public class Fad {
     public void removePåfyldning(Påfyldning påfyldning){
         if(påfyldnings.contains(påfyldning)){
             påfyldnings.remove(påfyldning);
-            påfyldning.setFad(null)
+            påfyldning.setFad(null);
         }
     }
 
