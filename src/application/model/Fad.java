@@ -11,6 +11,7 @@ public class Fad {
     private boolean isOptaget;
     private String oprindelse;
     private ArrayList<Påfyldning> påfyldnings;
+    private String fadId;
 
 
     public Fad(String fadType, int størrelse, String tidligereBrug, String oprindelse){
