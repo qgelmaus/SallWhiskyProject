@@ -5,9 +5,8 @@ public class Mængde {
     private double liter;
     private Destillering destillering;
     private Påfyldning påfyldning;
-    public Mængde(double liter, Destillering destillering, Påfyldning påfyldning){
+    public Mængde(double liter, Påfyldning påfyldning){
         this.liter = liter;
-        this.destillering = destillering;
         this.påfyldning = påfyldning;
     }
     public double getLiter(){
@@ -37,4 +36,7 @@ public class Mængde {
         return påfyldning;
     }
 
-}
+
+    }
+
+

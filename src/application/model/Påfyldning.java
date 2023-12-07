@@ -65,7 +65,7 @@ public class Påfyldning {
     }
 
     public Mængde createMængde(double liter){
-        Mængde mængde = new Mængde(liter, this);
+        Mængde mængde = new Mængde(liter,this);
         mængdes.add(mængde);
         return mængde;
     }
