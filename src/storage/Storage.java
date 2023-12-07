@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Storage {
     //TODO Lav storage
-    private List<Destillering> destillerings;
-    private List<Fad> fads;
+    private static List<Destillering> destillerings;
+    private static List<Fad> fads;
 
 
     public Storage(){
@@ -18,23 +18,23 @@ public class Storage {
     }
 
     //Alle gemte Destilleringer
-    public List<Destillering> getAllDestillerings(){
+    public static List<Destillering> getAllDestillerings(){
         return new ArrayList<Destillering>(destillerings);
     }
 
     //Gemme destilleringer
-    public void addDestillering(Destillering destillering){
+    public static void addDestillering(Destillering destillering){
         if(!destillerings.contains(destillering))
             destillerings.add(destillering);
     }
 
     //Alle gemte fad
-    public List<Fad> getAllFad(){
+    public static List<Fad> getAllFad(){
         return new ArrayList<Fad>(fads);
     }
 
     //Gemme fad
-    public void addFad(Fad fad){
+    public static void addFad(Fad fad){
         if(!fads.contains(fad))
             fads.add(fad);
     }

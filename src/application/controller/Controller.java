@@ -24,11 +24,11 @@ public class Controller {
         return controller;
     }
 
-    public Destillering opretDestillat(LocalDate startDato, LocalDate slutDato, int væskeMængde, String rygemateriale,
+    public static Destillering opretDestillering(LocalDate startDato, LocalDate slutDato, int væskeMængde, String rygemateriale,
        String kornSort, Medarbejder medarbejder,String kommentar) {
-        //TODO navn skal ændres til opretDestillering
-        Destillering d = new Destillering(startDato, slutDato, væskeMængde, rygemateriale, kornSort, medarbejder, kommentar);
-        Destillering.addDestillering(d); //TODO Noget med storage her
+
+        Destillering d = new Destillering(startDato, slutDato, medarbejder,væskeMængde, rygemateriale, kornSort, kommentar);
+        Storage.addDestillering(d);
         return d;
     }
     //TODO: Oprettelse af objekter.
