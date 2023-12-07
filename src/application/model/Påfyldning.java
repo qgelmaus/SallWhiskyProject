@@ -5,16 +5,22 @@ import java.time.LocalDate;
 
 public class Påfyldning {
 
-    private Destillering destillering;
     private Fad fad;
+    private Mængde mængde;
+    private boolean isWhisky;
     private double antalLiter;
-    private LocalDate dato;
+    private LocalDate påfyldningsDato;
+    private LocalDate tappeDato;
 
 
-    public Påfyldning(double antalLiter, LocalDate dato, Destillering destillering){
+    public Påfyldning(double antalLiter, Mængde mængde, boolean isWhisky, LocalDate dato){
         this.antalLiter = antalLiter;
-        this.dato = dato;
-        this.destillering = destillering;
+        this.mængde = mængde;
+        this.isWhisky = isWhisky;
+        if(!isWhisky) {
+            this.påfyldningsDato = dato;
+            this.tappeDato = påfyldningsDato.plusYears(3);
+        }
     }
 
     //TODO Påfyldningsmetoder
@@ -51,15 +57,15 @@ public class Påfyldning {
     }
     //Sammenhæng til fad slut.
 
-    //TODO Kod sammenhæng til klassen Destillering
-    //Sammenhæng til Destillering start:
+    //TODO Kod sammenhæng til klassen Mængde
+    //Sammenhæng til Mængde start:
 
 
-    //Sammenhæng til destillering slut.
+    //Sammenhæng til Mængde slut.
 
 
-    //TODO Kod sammenhæng til klassen Whisky
-    //Sammenhæng til whisky start:
+    //TODO Kod sammenhæng til klassen WhiskyMængde
+    //Sammenhæng til whiskyMængde start:
 
-    //Sammenhæng til whisky slut.
+    //Sammenhæng til whiskyMængde slut.
 }

@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Reol {
     private int kapacitet;
-    private int indhold = 0;
-
+    private String lokation;
     private List<Fad> fads;
 
 
-    public Reol(int kapacitet){
+    public Reol(int kapacitet, String lokation){
+        this.lokation = lokation;
         this.fads = new ArrayList<>();
         this.kapacitet = kapacitet;
     }
@@ -19,8 +19,11 @@ public class Reol {
     public void addFad(Fad fad){
         if(fads.size() < kapacitet && !fads.contains(fad)){
             fads.add(fad);
-            indhold++;
         }
+    }
+
+    public int remainingKapacitet(){
+        return kapacitet - fads.size();
     }
 
 

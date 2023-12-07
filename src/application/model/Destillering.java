@@ -17,9 +17,17 @@ private ArrayList<Medarbejder> medarbejders;
 
 
     //Konstructor:
-public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbejder){
+public Destillering(LocalDate startDato, LocalDate slutDato, Medarbejder medarbejder, int væskeMængde, String rygemateriale, String kornSort, String kommentar){
     this.startDato = startDato;
     this.slutDato = slutDato;
+    this.væskeMængde = væskeMængde;
+    this.rygemateriale = rygemateriale;
+    this.kornSort = kornSort;
+    this.kommentar = kommentar;
+
+    //TODO Overvej hvordan vi vil gøre det her:
+    this.medarbejders = new ArrayList<>();
+    addMedarbejder(medarbejder);
 }
 
 
