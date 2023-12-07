@@ -28,6 +28,7 @@ public class Påfyldning {
     //Påfyldningsmetoder:
     public Whisky påfyldningAfWhisky(double antalLiter){
         //TODO ???
+        return null;
     }
 
     public double resterendeIndhold(){
