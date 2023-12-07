@@ -9,7 +9,7 @@ public class StartPage {
 
     private static Button opretFadBtn, opretDestilleringBtn, opretLagerBtn;
 
-    public static Scene createStartScene(Stage primaryStage, OpretDestillering mainMenu) {
+    public static Scene createStartScene(Stage primaryStage, OpretDestillering opretDestillering, OpretFad opretFad, OpretLager opretLager) {
         primaryStage.setTitle("LavWhisky");
         GridPane startPane = new GridPane();
 
@@ -21,7 +21,9 @@ public class StartPage {
         startPane.add(opretLagerBtn, 3, 2);
 
 
-        opretDestilleringBtn.setOnAction(event -> primaryStage.setScene(mainMenu.getScene()));
+        opretDestilleringBtn.setOnAction(event -> primaryStage.setScene(opretDestillering.getScene()));
+        opretFadBtn.setOnAction(event -> primaryStage.setScene(opretFad.getScene()));
+        opretLagerBtn.setOnAction(event -> primaryStage.setScene(opretLager.getScene()));
 
 
         return new Scene(startPane, 800, 500);

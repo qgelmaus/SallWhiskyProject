@@ -11,7 +11,7 @@ public class OpretDestillering {
     private DatePicker startDatoDtp, slutDatoDtp;
     private ComboBox<String> maltBatchCbo, rygeMaterialeCbo, kornSortCbo;
     private Label startDatoLbl, slutDatoLbl, kornSortLbl, rygeMaterialeLbl, rgstrMedarbejderLbl, væskemængdeLbl, maltBatchLbl, bemærkningerLbl;
-    private Button fortsæt, tilbage;
+    private Button fortsætBtn, tilbageBtn;
 
     public OpretDestillering() {
         this.gridPane = new GridPane();
@@ -55,8 +55,8 @@ public class OpretDestillering {
         væskeMængdeTxf.setStyle("-fx-text-fill: gray;");
 
 
-
     }
+
 
     public Scene getScene() {
         return new Scene(this.gridPane, 800, 500);
