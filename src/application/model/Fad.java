@@ -10,7 +10,7 @@ public class Fad {
     private boolean isFull;
     private boolean isOptaget;
     private String oprindelse;
-    private ArrayList<Påfyldning> påfyldnings;
+    private final ArrayList<Påfyldning> påfyldnings = new ArrayList<>();
     private String fadId;
 
 
@@ -21,7 +21,7 @@ public class Fad {
         this.oprindelse = oprindelse;
         isBlend = false;
         isOptaget = false;
-        påfyldnings = new ArrayList<>();
+
     }
 
     //Kontrollerer kapacitet
@@ -70,6 +70,9 @@ public class Fad {
 
 
     //Sammenhæng til påfyldning slut.
+
+    //Sammenhæng til reol:
+    //TODO Skal sammenhængen måske være enkeltrettet?
 
 
 }

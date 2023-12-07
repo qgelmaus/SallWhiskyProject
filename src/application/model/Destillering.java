@@ -12,6 +12,7 @@ private String rygemateriale;
 private String kornSort;
 private String kommentar;
 private ArrayList<Medarbejder> medarbejders;
+private ArrayList<Mængde> mængdes;
 
 //TODO Kod sammenhæng til klassen påfyldning
 
@@ -49,10 +50,23 @@ public ArrayList<Medarbejder> getMedarbejders(){
     return new ArrayList<>(medarbejders);
 }
 
-    //Sammenhæng til påfyldning:
+    //Sammenhæng til mængde:
+
+    public ArrayList<Mængde> getMængdes(){
+    return new ArrayList<>(mængdes);
+    }
+    public void addMængde(Mængde mængde){
+        if(!mængdes.contains(mængde)){
+            mængdes.add(mængde);
+            mængde.setDestillering(this);
+        }
+    }
 
 
-
-
-
+    public void removeMængde(Mængde mængde) {
+        if(mængdes.contains(mængde)){
+            mængdes.remove(mængde);
+            mængde.setDestillering(null);
+        }
+    }
 }
