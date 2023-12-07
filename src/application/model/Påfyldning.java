@@ -57,9 +57,9 @@ public class Påfyldning {
             }
         }
     }
-    //Sammenhæng til fad slut.
 
-    //TODO Kod sammenhæng til klassen Mængde
+
+
     //Sammenhæng til Mængde start:
     public ArrayList<Mængde> getMængdes(){
         return new ArrayList<>(mængdes);
@@ -77,10 +77,10 @@ public class Påfyldning {
         }
     }
 
-    //Sammenhæng til Mængde slut.
 
 
-    //TODO Kod sammenhæng til klassen WhiskyMængde
+
+
     //Sammenhæng til whiskyMængde start:
     public ArrayList<WhiskyMængde> getWhiskyMængdes(){
         return new ArrayList<>(whiskyMængdes);
@@ -101,5 +101,5 @@ public class Påfyldning {
     }
 
 
-    //Sammenhæng til whiskyMængde slut.
+
 }

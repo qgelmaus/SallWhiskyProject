@@ -7,10 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="javafx.controls" level="application" />
-    <orderEntry type="library" exported="" name="javafx" level="application" />
-    <orderEntry type="library" exported="" name="javafx." level="application" />
-    <orderEntry type="library" exported="" name="LinkedListOpgaver" level="application" />
-    <orderEntry type="library" exported="" name="sqljdbc4" level="application" />
+    <orderEntry type="library" name="javafx" level="application" />
   </component>
 </module>
