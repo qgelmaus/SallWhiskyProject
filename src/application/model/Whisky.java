@@ -28,7 +28,7 @@ public class Whisky {
     }
 
     public WhiskyMængde createWhiskyMængde(double liter){
-        WhiskyMængde whiskyMængde = new WhiskyMængde(double, this);
+        WhiskyMængde whiskyMængde = new WhiskyMængde(liter, this);
         whiskyMængdes.add(whiskyMængde);
         return whiskyMængde;
     }
