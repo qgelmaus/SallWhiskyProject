@@ -10,11 +10,14 @@ public class OpretDestillering {
     private TextField rgstrMedarbejderTxf, væskeMængdeTxf;
     private DatePicker startDatoDtp, slutDatoDtp;
     private ComboBox<String> maltBatchCbo, rygeMaterialeCbo, kornSortCbo;
-    private Label startDatoLbl, slutDatoLbl, kornSortLbl, rygeMaterialeLbl, rgstrMedarbejderLbl, væskemængdeLbl, maltBatchLbl, bemærkningerLbl;
+    private Label startDatoLbl, slutDatoLbl, kornSortLbl, rygeMaterialeLbl, rgstrMedarbejderLbl, væskemængdeLbl, maltBatchLbl, bemærkningerLbl, kommentarLbl;
     private Button fortsætBtn, tilbageBtn;
+    private GridPane lastScene;
+    private TextArea kommentarTxA;
 
     public OpretDestillering() {
         this.gridPane = new GridPane();
+        this.gridPane.setGridLinesVisible(true);
         this.gridPane.setVgap(5);
         this.gridPane.setHgap(20);
 
@@ -54,7 +57,20 @@ public class OpretDestillering {
         this.gridPane.add(væskeMængdeTxf, 1, 4);
         væskeMængdeTxf.setStyle("-fx-text-fill: gray;");
 
+        //Kommentar
+        kommentarLbl = new Label("Kommentar:");
+        kommentarTxA = new TextArea("Kommentar..");
 
+        this.gridPane.add(kommentarLbl,1, 7);
+        this.gridPane.add(kommentarTxA, 1, 8);
+        kommentarTxA.setStyle("-fx-text-fill: gray;");
+        kommentarTxA.onMouseClickedProperty();
+
+
+    }
+
+    public void setLastScene(GridPane gridPane){
+        this.lastScene = gridPane;
     }
 
 

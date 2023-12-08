@@ -43,42 +43,42 @@ public class Controller {
     }
 
     //TODO
-//    public static Påfyldning opretPåfyldning(){
-//        Påfyldning p = new Påfyldning();
-//        Storage.addPåfyldning(p);
-//        return p;
-//    }
+    public static Påfyldning opretPåfyldning(double antalLiter, Mængde mængde, boolean isWhisky, LocalDate dato){
+        Påfyldning p = new Påfyldning(antalLiter, mængde, isWhisky, dato);
+        Storage.addPåfyldning(p);
+        return p;
+    }
 //
-//    public static Fad opretFad(){
-//        Fad f = new Fad();
-//        Storage.addFad(f);
-//        return f;
-//    }
+    public static Fad opretFad(String fadType, int størrelse, String tidligereBrug, String oprindelse){
+        Fad f = new Fad(fadType, størrelse, tidligereBrug, oprindelse);
+        Storage.addFad(f);
+        return f;
+    }
 //
-//    public static Lager opretLager(){
-//        Lager l = new Lager();
-//        Storage.addLager(l);
-//        return l;
-//    }
+    public static Lager opretLager(){
+        Lager l = new Lager();
+        Storage.addLager(l);
+        return l;
+    }
 //
-//    public static Reol opretReol(){
-//        Reol r = new Reol();
-//        Storage.addReol(r);
-//        return r;
-//    }
+    public static Reol opretReol(int kapacitet, String lokation){
+        Reol r = new Reol(kapacitet, lokation);
+        Storage.addReol(r);
+        return r;
+    }
 //
-//    public static Whisky opretWhisky(){
-//        Whisky w = new Whisky();
-//        Storage.addWhisky(w);
-//        return w;
-//    }
+    public static Whisky opretWhisky(String navn, int nr, double procent, Påfyldning påfyldning, double tilsætningAfVand){
+        Whisky w = new Whisky(navn, nr, procent, påfyldning, tilsætningAfVand);
+        Storage.addWhisky(w);
+        return w;
+    }
     //TODO: Oprettelse af objekter.
 
 
 
     public void createSomeObjects() {
-//        opretLager();
-//        opretReol();
+        opretLager();
+        opretReol(500, "Hal 1");
     }
 
 }

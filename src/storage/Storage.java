@@ -59,7 +59,12 @@ public class Storage {
     }
 
     //Påfyldninger
-    //TODO Måske ikke laves?
+    public static List<Påfyldning> getAllPåfyldnings(){return new ArrayList<>(påfyldnings);}
+
+    public static void addPåfyldning(Påfyldning p) {
+        if(!påfyldnings.contains(p))
+            påfyldnings.add(p);
+    }
 
     //Reoler
     public static List<Reol> getAllReols(){return new ArrayList<>(reols);}

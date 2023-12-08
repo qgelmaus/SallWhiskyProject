@@ -12,6 +12,7 @@ public class OpretLager {
 //    private ComboBox<String> ;
 //    private Label ;
       private Button fortsætBtn, tilbageBtn;
+      private Scene lastScene;
 
     public OpretLager() {
         this.gridPane = new GridPane();
@@ -19,6 +20,9 @@ public class OpretLager {
         this.gridPane.setHgap(20);
 
 
+    }
+    public void setLastScene(Scene scene){
+        this.lastScene = scene;
     }
 
     public Scene getScene() {
